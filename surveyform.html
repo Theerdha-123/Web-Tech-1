@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Survey Form</title>
+    <style>
+        h1{
+            text-align: center;
+            color: rgb(221, 88, 16);
+            box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+        }
+        label{
+            color: rgb(222, 118, 7);
+        }
+        textarea{
+            border: 1px solid brown;
+        }
+    </style>
+</head>
+<body bgcolor="#fdf6e3">
+    <h1>Website Survey Form</h1>
+    <form action="">
+        <label >How would you rate the ease of navigating our website? </label><br>
+        <input type="radio" name="option" id="option1">
+        <label for="option1">1(Very Difficult)</label><br>
+        <input type="radio" name="option" id="option2">
+        <label for="option2">2</label><br>
+        <input type="radio" name="option" id="option3">
+        <label for="option3">3</label><br>
+        <input type="radio" name="option" id="option4">
+        <label for="option4">4</label><br>
+        <input type="radio" name="option" id="option5">
+        <label for="option5">5(Easy)</label>
+        
+        <br>
+        
+        <label>Which website features do you use most frequently? (You may select more than one)</label><br>
+        <input type="checkbox" name="ch" id="ch1">
+        <label for="ch1">Search Function</label><br>
+        <input type="checkbox" name="ch" id="ch2">
+        <label for="ch2">Navigation Menu</label><br>
+        <input type="checkbox" name="ch" id="ch3">
+        <label for="ch3">Contact Form</label><br>
+        <input type="checkbox" name="ch" id="ch4">
+        <label for="ch4">Product/Service Pages</label><br>
+        <input type="checkbox" name="ch" id="ch5">
+        <label for="ch5">FAQs or Help Section</label><br>
+        <br>
+        <label >How Visually  appealing do you find our website design?</label><br>
+        <input type="radio" name="rb" id="r1">
+        <label for="r1">Very Unattractive</label><br>
+        <input type="radio" name="rb" id="r2">
+        <label for="r2">Unattractive</label><br>
+        <input type="radio" name="rb" id="r3">
+        <label for="r3">Neutral</label><br>
+        <input type="radio" name="rb" id="r4">
+        <label for="r4">Attractive</label><br>
+        <input type="radio" name="rb" id="r5">
+        <label for="r5">Very Attractive</label>
+        <br>
+        <label>Did you experience any problems or difficulties while browsing our site?(Please provide below)</label><br>
+        <textarea name="" rows="4" cols="40" placeholder="type here"></textarea>
+        
+        <br>
+        <label for="">How quickly did the pages load during your visit?</label><br>
+        <input type="radio" name="stick" id="s1">
+        <label for="s1">Very Slow</label><br>
+        <input type="radio" name="stick" id="s2">
+        <label for="s2">Slow</label><br>
+        <input type="radio" name="stick" id="s3">
+        <label for="s3">Average</label><br>
+        <input type="radio" name="stick" id="s4">
+        <label for="s4">Fast</label><br>
+        <input type="radio" name="stick" id="s5">
+        <label for="s5">Very Fast</label><br>
+        <br>
+        <label for="">How likely are you to recommend our website to others?</label><br>
+        <input type="radio" name="opt" id="opt1">
+        <label for="opt1">Very unlikely</label><br>
+        <input type="radio" name="opt" id="opt2">
+        <label for="opt2">Unlikely</label><br>
+        <input type="radio" name="opt" id="opt3">
+        <label for="opt3">Neutral</label><br>
+        <input type="radio" name="opt" id="opt4">
+        <label for="opt4">Likely</label><br>
+        <input type="radio" name="opt" id="opt5">
+        <label for="opt5">Very Likely</label>
+        <br>
+        <p>Type below if you have problems</p>
+        <textarea name="comments" rows="4" cols="40" placeholder="If you have any other please type here your problem"></textarea>
+<br><br>
+<input type="submit" value="Submit the Survey">
+<input type="reset" value="Reset the form">
+    </form>
+
+</body>
+</html>

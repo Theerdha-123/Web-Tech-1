@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color:black;
+            font-family: cursive;
+            font-size: 40px;
+            color:white;
+        }
+        table,th,td{
+            border-collapse: collapse;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid white;                                                
+        }
+        table{
+            margin-top: 50px;            
+            
+        }
+        tr{
+            border-radius: 10px;
+        }
+        th{
+            width:200px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+            
+        }
+        td{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:rgba(126, 252, 0, 0.4);
+
+        }
+        .one{
+            background-color: white;
+        }
+        .two{
+            border-radius: 100px;
+        }
+        .column{
+            background-color: #8CD232;
+            color: white;
+        }
+        .tick{
+            color: green;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .last{
+            color: #8CD232;
+            background-color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .lastrone{
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 >Bandwidth Pricing Table</h1>
+    
+        <table border="2" >
+            <th class="one"></th>
+            <th class="column">Smart Starter</th>
+            <th class="column">Smart Medium</th>
+            <th class="column">Smart Business</th>
+            <th class="column">Smart Deluxe</th>
+            <tr>
+                <td class="column">Storage Space</td>
+                <td>512 MB</td>
+                <td>1 GB</td>
+                <td>2 GB</td>
+                <td>4 GB</td>
+            </tr>
+            <tr>
+                <td class="column">Bandwidth</td>
+                <td>50 GB</td>
+                <td>100 GB</td>
+                <td>150 GB</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td class="column">MySQL Databases</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td class="column">Setup</td>
+                <td>19.90 $</td>
+                <td>12.90 $</td>
+                <td>free</td>
+                <td>free</td>
+            </tr>
+            <tr >
+                <td class="column">PHP 5</td>
+                <td class="tick">&#10003</td>
+                <td class="tick">&#10003</td>
+                <td class="tick">&#10003</td>
+                <td class="tick">&#10003</td>
+            </tr>
+            <tr>
+                <td class="column">Ruby on Rails</td>
+                <td class="tick">&#10003</td>
+                <td class="tick">&#10003</td>
+                <td class="tick">&#10003</td>
+                <td class="tick">&#10003</td>
+            </tr>
+            <tr>
+                <td class="lastrone">Price per month</td>
+                <td class="last">$ 2.90</td>
+                <td class="last">$ 5.90</td>
+                <td class="last">$ 9.90</td>
+                <td class="last">$ 14.90</td>
+            </tr>
+        </table>    
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff9800;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #home {
+      background-color: white;
+      color:black;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+    }
+
+    /* About Section */
+    #about {
+      background: #fff;
+      margin: 20px auto;
+      border-radius: 10px;
+      padding: 40px;
+      max-width: 1000px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    #about img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #ff9800;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    #about p {
+      max-width: 600px;
+      text-align: left;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* Skills Section */
+#skills {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+#skills h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.skill-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: #eee;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+      background: #ddd;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Contact Section */
+#contact {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  color: #444;
+}
+
+.contact-container strong {
+  color: #000;
+}
+
+h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 50px;   /* length of line */
+  height: 3px;   /* thickness */
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section id="home">
+    <h1>Hello, I'm M.V.Theerdha</h1>
+    <p>B.Tech student | Cyber Security | MohanBabu University,Tirupati</p>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <img src="pic.jpg" alt="My Photo">
+    <div>
+      <h2>About Me</h2>
+      <p>
+        ✨ I’m someone who enjoys learning new things and exploring creative ideas. I love working on projects that challenge me to think differently and improve my skills. In my free time, I like spending time on hobbies that keep me curious, motivated, and growing as a person.And I have  interest in digital forensics.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <!-- Skills Section -->
+<!-- Skills Section -->
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+      <h3>HTML5</h3>
+      <p>Semantic markup, accessibility, and modern HTML5 APIs.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+      <h3>CSS3</h3>
+      <p>Flexbox, Grid, animations, and responsive design principles.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+      <h3>JavaScript</h3>
+      <p>ES6+, DOM manipulation, AJAX, and dynamic functionality.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+      <h3>Java</h3>
+      <p>Object-oriented programming, data structures, and backend logic.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://img.icons8.com/fluency/96/artificial-intelligence.png" alt="Machine Learning">
+      <h3>Machine Learning (Basics)</h3>
+      <p>Understanding of supervised learning, data preprocessing, and simple models.</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Automatic Street Light Control</h3>
+        <p>"Developed an IoT-based automatic street light control system using Proteus, integrating light sensors and microcontrollers for energy-efficient street lighting management and it  sends fault alerts."</p><br>
+        <a href="23102A020029.docx">know more</a>
+      </div>
+      <div class="project">
+        <h3>Airline Reservation System in DBMS</h3>
+        <p>"An Airline Reservation System in DBMS efficiently manages flight bookings, passenger details, and scheduling, ensuring seamless data storage, retrieval, and updates for users and administrators."
+</p>
+      </div>
+      <div class="project">
+        <h3>Diabetes Disease Prediction using ML</h3>
+        <p>"Diabetes disease prediction using machine learning involves analyzing patient data to predict the likelihood of developing diabetes based on various features like age, BMI, glucose levels,Diabetes pedigree function, and pregnancies."<br>
+          
+</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-container">
+    <p><strong>📍 Location:</strong> Andhra pradesh,India</p>
+    <p><strong>📧 Email:</strong> mentatheerdha2005@email.com</p>
+    <p><strong>📞 Phone:</strong> +91-9121025203</p>
+    
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 M.V.Theerdha | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

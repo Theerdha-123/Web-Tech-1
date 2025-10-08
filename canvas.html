@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        color: aquamarine;
+    }
+    canvas{
+        border: 2px solid black;
+        
+
+    }
+</style>
+<body>
+    <h1>My Canvas</h1>
+    <canvas id="mycanvas" width="900" height="450"></canvas>
+    <script>
+        var canvas=document.getElementById("mycanvas");
+        var c=canvas.getContext("2d");
+        c.fillStyle="red";
+        c.fillRect(10,10,50,50);
+        c.beginPath();
+        c.moveTo(50,300);
+        c.lineTo(300,100);
+        c.strokeStyle="blue";
+        c.stroke();
+        c.font="50px Arial";
+        c.fillStyle="Orange";
+        c.fillText("MBU",70,140);
+        c.strokeStyle="Green";
+        c.strokeText("Cyber Security",250,200);
+        c.fillStyle="violet";
+        c.fillText("India",100,300);
+        c.strokeStyle="crimson";
+        c.strokeText("Theerdha",300,400);
+    </script>    
+</body>
+</html>
