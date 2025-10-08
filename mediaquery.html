@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Webpage</title>
+  <style>
+    /* Base styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      display: block;
+    }
+
+    nav a:hover {
+      background: #575757;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 1rem auto;
+      background: white;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    main {
+      flex: 3;
+      padding: 1rem;
+    }
+
+    aside {
+      flex: 1;
+      background: #f9f9f9;
+      padding: 1rem;
+      border-left: 1px solid #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+      margin-top: 1rem;
+    }
+
+    /* Media query for small screens */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      aside {
+        border-left: none;
+        border-top: 1px solid #ddd;
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Responsive Website</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <main>
+      <h2>Welcome!</h2>
+      <p>This is a simple responsive webpage using only HTML and CSS.</p>
+      <p>Resize the browser window to see the layout adapt.</p>
+    </main>
+    <aside>
+      <h3>Sidebar</h3>
+      <p>Additional content or links can go here.</p>
+    </aside>
+  </div>
+
+  <footer>
+    &copy; 2025 My Responsive Website
+  </footer>
+
+</body>
+</html>
